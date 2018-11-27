@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b3d74092396740698b2311ecb2a856f9" Name="Diagram1">
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.AccessTable" Width="1.5" PointX="9.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.AcedamicYearTable" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.ClassCreationTable" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.ClassDivisionTable" Width="1.5" PointX="5.25" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.DesignationTable" Width="1.5" PointX="3" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.ExamTable" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.FeeTable" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.FileTable" Width="1.5" PointX="11.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.MarksTable" Width="1.5" PointX="7.5" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.ModuleTable" Width="1.5" PointX="7.5" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.ParentTable" Width="1.5" PointX="3.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.SalaryTable" Width="1.5" PointX="5.25" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.SchoolTable" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.StaffClassTable" Width="1.5" PointX="7.5" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.StaffEduDetailsTable" Width="1.5" PointX="5.25" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.StaffTable" Width="1.5" PointX="3" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.StudentClassTable" Width="1.5" PointX="7.5" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.StudentPreviousAcedamicTable" Width="1.5" PointX="8.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.StudentTable" Width="1.5" PointX="6" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.SubjectClassTable" Width="1.5" PointX="7.5" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.SubjectTable" Width="1.5" PointX="3" PointY="36.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.UserCreationTable" Width="1.5" PointX="9" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.UserTypeTable" Width="1.5" PointX="1.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolManagementSystemModel.ViewsTable" Width="1.5" PointX="7.5" PointY="33.875" IsExpanded="true" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_AccessTable_ModuleTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_AccessTable_UserTypeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_AccessTable_ViewsTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_AcedamicYearTable_SchoolTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_MarksTable_AcedamicYearTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_ClassCreationTable_SchoolTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_ClassDivisionTable_ClassCreationTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_MarksTable_ClassDivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StaffClassTable_ClassDivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StudentClassTable_ClassDivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_SubjectClassTable_ClassDivisionTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_DesignationTable_SchoolTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_DesignationTable_UserTypeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_MarksTable_ExamTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_FeeTable_StudentDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_FileTable_UserCreationTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_MarksTable_StaffBasicDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_MarksTable_StudentDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_MarksTable_SubjectClassTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_ParentTable_UserTypeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StudentDetails_ParentTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_SalaryTable_StaffBasicDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StaffBasicDetails_SchoolTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StudentDetails_SchoolTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_SubjectTable_SchoolTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_UserCreationTable_SchoolTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StaffClassTable_StaffBasicDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StaffClassTable_SubjectTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StaffEduDetailsTable_StaffBasicDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StaffBasicDetails_UserCreationTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StudentClassTable_StudentDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StudentPreviousAcedamicTable_StudentDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_StudentDetails_UserTypeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_SubjectClassTable_SubjectTable" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolManagementSystemModel.FK_UserCreationTable_UserCreationTable" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

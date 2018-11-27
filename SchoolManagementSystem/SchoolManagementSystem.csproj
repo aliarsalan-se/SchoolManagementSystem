@@ -49,6 +49,12 @@
     <Reference Include="DevExtreme.AspNet.Mvc">
       <HintPath>..\lib\DevExtreme\DevExtreme.AspNet.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -66,6 +72,8 @@
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
@@ -1434,6 +1442,16 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Models\SMS.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SMS.Context.cs</LastGenOutput>
+      <DependentUpon>SMS.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\SMS.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SMS.edmx</DependentUpon>
+      <LastGenOutput>SMS.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\aspnet\dx.aspnet.data.js" />
     <Content Include="Scripts\aspnet\dx.aspnet.mvc.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1691,6 +1709,13 @@
     <Content Include="Scripts\bower_components\summernote\css\font\summernote3fd8.ttf" />
     <Content Include="Scripts\bower_components\summernote\css\font\summernote3fd8.woff" />
     <Content Include="Scripts\bower_components\summernote\css\font\summernoted41d.eot" />
+    <EntityDeploy Include="Models\SMS.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SMS.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SMS.edmx.diagram">
+      <DependentUpon>SMS.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />
     <Content Include="Scripts\jquery-3.1.0.min.js" />
@@ -1731,6 +1756,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_RightSideMenu.cshtml" />
     <Content Include="Views\Shared\_StyleSelector.cshtml" />
+    <Content Include="Views\Admin\RegisterStudent.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1798,15 +1824,119 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\SampleData.cs" />
+    <Compile Include="Models\AccessTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AcedamicYearTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClassCreationTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClassDivisionTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DesignationTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExamTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FeeTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fee_for_student_Result.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FileTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarksTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModuleTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ParentTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SalaryTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SchoolTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SMS.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMS.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SMS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SMS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SMS.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StaffClassTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StaffEduDetailsTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StaffTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StudentClassTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StudentPreviousAcedamicTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StudentTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SubjectClassTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SubjectTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserCreationTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserTypeTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\userType_Result.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewsTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
