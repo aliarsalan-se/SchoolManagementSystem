@@ -4,12 +4,111 @@
     ViewBag.Title = "RegisterStudent";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<html>
-<head>
+<div class="pcoded-content" style="width:700px; position:center">
+    <div class="pcoded-inner-content">
 
-</head>
-<body>
-   
-</body>
-</html>
+        <div class="main-body">
+            <div class="page-wrapper">
+
+                <div class="page-header">
+                    <div class="page-header-title">
+                        <h4>Forms Wizard</h4>
+                    </div>
+                </div>
+                <div class="page-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-header-right">
+                                        <i class="icofont icofont-rounded-down"></i>
+                                        <i class="icofont icofont-refresh"></i>
+                                    </div>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="wizard">
+                                                <section>
+                                                    <form class="wizard-form" id="example-advanced-form" action="#">
+                                                        <h3> Registration </h3>
+                                                        <fieldset>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4 col-lg-2">
+                                                                    <label for="StudentFullName" class="block">Student FullName: *</label>
+                                                                </div>
+                                                                <div class="col-sm-8 col-lg-10">
+                                                                    <input id="StudentFullName" name="StudentFullName" type="text" class="required form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4 col-lg-2">
+                                                                    <label for="StudentDOB" class="block">Date Of Birth: *</label>
+                                                                </div>
+                                                                <div class="col-sm-4 col-lg-6">
+                                                                    <input id="StudentDOB" name="StudentDOB" type="date" class="required form-control" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4 col-lg-2">
+                                                                    <br />
+                                                                    <label for="StudentGender" class="block">Gender : *</label>
+                                                                </div>
+                                                                <div class="col-sm-4 col-lg-6">
+                                                                    <select id="StudentGender" name="StudentGender" type="" class="required form-control">
+                                                                        <option value="Male">Male</option>
+                                                                        <option value="Female">Female</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4 col-lg-2">
+                                                                    <br />
+                                                                    <label for="StudentProvince" class="block">Province : *</label>
+                                                                </div>
+                                                                <div class="col-sm-6 col-lg-8">
+                                                                    <select id="StudentProvince" name="StudentProvince" type="" class="required form-control">
+                                                                        <option value="PK-JK">Azad Kashmir</option>
+                                                                        <option value="PK-BA">Balochistan</option>
+                                                                        <option value="PK-TA">Federally Administered Tribal Areas</option>
+                                                                        <option value="PK-GB">Gilgit-Baltistan</option>
+                                                                        <option value="PK-IS">Federal</option>
+                                                                        <option value="PK-KP">Khyber Pakhtunkhwa</option>
+                                                                        <option value="PK-PB">Punjab</option>
+                                                                        <option value="PK-SD">Sindh</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4 col-lg-2">
+                                                                    <label for="DateEnroll" class="block">Date Of Enrollment:</label>
+                                                                </div>
+                                                                <div class="col-sm-4 col-lg-6">
+                                                                    <input id="DateEnroll" name="DateEnroll" type="date" class="required form-control" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <div class="col-sm-4 col-lg-2">
+                                                                    <label for="StudentDOB" class="block">Date Of Birth: *</label>
+                                                                </div>
+                                                                <div class="col-sm-4 col-lg-6">
+                                                                    <input id="StudentDOB" name="StudentDOB" type="date" class="required form-control" />
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </form>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
