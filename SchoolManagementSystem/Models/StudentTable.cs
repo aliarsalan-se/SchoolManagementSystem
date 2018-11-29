@@ -28,7 +28,7 @@ namespace SchoolManagementSystem.Models
         public string StudentDOB { get; set; }
         public string StudentGender { get; set; }
         public string StudentCity { get; set; }
-        public string StudentDistrict { get; set; }
+        public string StudentRegNumber { get; set; }
         public string StudentProvince { get; set; }
         public string StudentPicture { get; set; }
         public string DateEnroll { get; set; }

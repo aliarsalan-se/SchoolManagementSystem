@@ -1438,14 +1438,15 @@
     <Content Include="Content\dx.spa.css" />
     <Content Include="Content\icons\faculty.png" />
     <Content Include="Content\icons\student.png" />
+    <Content Include="Content\Images\student.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Models\SMS.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SMS.Context.cs</LastGenOutput>
       <DependentUpon>SMS.edmx</DependentUpon>
+      <LastGenOutput>SMS.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\SMS.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -1905,6 +1906,9 @@
       <DependentUpon>SMS.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\StudentPreviousAcedamicTable.cs">
+      <DependentUpon>SMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StudentRegistration.cs">
       <DependentUpon>SMS.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\StudentTable.cs">

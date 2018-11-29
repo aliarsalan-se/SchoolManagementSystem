@@ -52,6 +52,7 @@ namespace SchoolManagementSystem.Models
         public virtual DbSet<UserCreationTable> UserCreationTables { get; set; }
         public virtual DbSet<UserTypeTable> UserTypeTables { get; set; }
         public virtual DbSet<ViewsTable> ViewsTables { get; set; }
+        public virtual DbSet<StudentRegistration> StudentRegistrations { get; set; }
     
         public virtual ObjectResult<fee_for_student_Result> fee_for_student(string name)
         {

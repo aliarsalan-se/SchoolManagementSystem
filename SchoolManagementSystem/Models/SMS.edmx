@@ -201,7 +201,7 @@ warning 6013: The table/view 'SchoolManagementSystem.dbo.DesignationMasterTable'
           <Property Name="StudentDOB" Type="varchar" MaxLength="20" />
           <Property Name="StudentGender" Type="varchar" MaxLength="10" />
           <Property Name="StudentCity" Type="varchar" MaxLength="50" />
-          <Property Name="StudentDistrict" Type="varchar" MaxLength="50" />
+          <Property Name="StudentRegNumber" Type="varchar" MaxLength="50" />
           <Property Name="StudentProvince" Type="varchar" MaxLength="50" />
           <Property Name="StudentPicture" Type="varchar" MaxLength="50" />
           <Property Name="DateEnroll" Type="varchar" MaxLength="50" />
@@ -260,6 +260,35 @@ warning 6013: The table/view 'SchoolManagementSystem.dbo.DesignationMasterTable'
           <Property Name="ViewName" Type="varchar" MaxLength="50" />
           <Property Name="ActionName" Type="varchar" MaxLength="50" />
           <Property Name="ControllerName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SchoolManagementSystem.dbo.StudentRegistration' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="StudentRegistration">
+          <Key>
+            <PropertyRef Name="StudentID" />
+            <PropertyRef Name="SPATID" />
+          </Key>
+          <Property Name="StudentID" Type="int" Nullable="false" />
+          <Property Name="StudentName" Type="varchar" MaxLength="50" />
+          <Property Name="StudentDOB" Type="varchar" MaxLength="20" />
+          <Property Name="StudentGender" Type="varchar" MaxLength="10" />
+          <Property Name="StudentCity" Type="varchar" MaxLength="50" />
+          <Property Name="StudentRegNumber" Type="varchar" MaxLength="50" />
+          <Property Name="StudentProvince" Type="varchar" MaxLength="50" />
+          <Property Name="StudentPicture" Type="varchar" MaxLength="50" />
+          <Property Name="DateEnroll" Type="varchar" MaxLength="50" />
+          <Property Name="UserCreationID" Type="int" />
+          <Property Name="SchoolID" Type="int" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="USerTypeID" Type="int" />
+          <Property Name="ParentEmail" Type="varchar" MaxLength="20" />
+          <Property Name="RelationToStudent" Type="varchar" MaxLength="30" />
+          <Property Name="ParentAddress" Type="varchar" MaxLength="100" />
+          <Property Name="ContacNumber" Type="int" />
+          <Property Name="ParentName" Type="varchar" MaxLength="50" />
+          <Property Name="Percentage" Type="int" />
+          <Property Name="PreviousSchoolName" Type="varchar" MaxLength="50" />
+          <Property Name="SPATID" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_AccessTable_ModuleTable">
           <End Role="ModuleTable" Type="Self.ModuleTable" Multiplicity="0..1" />
@@ -750,6 +779,31 @@ error 6004: The table 'SchoolManagementSystem.dbo.DesignationMasterTable' is ref
           <EntitySet Name="UserCreationTable" EntityType="Self.UserCreationTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserTypeTable" EntityType="Self.UserTypeTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ViewsTable" EntityType="Self.ViewsTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentRegistration" EntityType="Self.StudentRegistration" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [StudentRegistration].[StudentID] AS [StudentID], 
+    [StudentRegistration].[StudentName] AS [StudentName], 
+    [StudentRegistration].[StudentDOB] AS [StudentDOB], 
+    [StudentRegistration].[StudentGender] AS [StudentGender], 
+    [StudentRegistration].[StudentCity] AS [StudentCity], 
+    [StudentRegistration].[StudentRegNumber] AS [StudentRegNumber], 
+    [StudentRegistration].[StudentProvince] AS [StudentProvince], 
+    [StudentRegistration].[StudentPicture] AS [StudentPicture], 
+    [StudentRegistration].[DateEnroll] AS [DateEnroll], 
+    [StudentRegistration].[UserCreationID] AS [UserCreationID], 
+    [StudentRegistration].[SchoolID] AS [SchoolID], 
+    [StudentRegistration].[ParentID] AS [ParentID], 
+    [StudentRegistration].[USerTypeID] AS [USerTypeID], 
+    [StudentRegistration].[ParentEmail] AS [ParentEmail], 
+    [StudentRegistration].[RelationToStudent] AS [RelationToStudent], 
+    [StudentRegistration].[ParentAddress] AS [ParentAddress], 
+    [StudentRegistration].[ContacNumber] AS [ContacNumber], 
+    [StudentRegistration].[ParentName] AS [ParentName], 
+    [StudentRegistration].[Percentage] AS [Percentage], 
+    [StudentRegistration].[PreviousSchoolName] AS [PreviousSchoolName], 
+    [StudentRegistration].[SPATID] AS [SPATID]
+    FROM [dbo].[StudentRegistration] AS [StudentRegistration]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_AccessTable_ModuleTable" Association="Self.FK_AccessTable_ModuleTable">
             <End Role="ModuleTable" EntitySet="ModuleTable" />
             <End Role="AccessTable" EntitySet="AccessTable" />
@@ -1133,7 +1187,7 @@ error 6004: The table 'SchoolManagementSystem.dbo.DesignationMasterTable' is ref
           <Property Name="StudentDOB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="StudentGender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="StudentCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="StudentDistrict" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StudentRegNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="StudentProvince" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="StudentPicture" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="DateEnroll" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -1215,6 +1269,33 @@ error 6004: The table 'SchoolManagementSystem.dbo.DesignationMasterTable' is ref
           <Property Name="ActionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ControllerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="AccessTables" Relationship="Self.FK_AccessTable_ViewsTable" FromRole="ViewsTable" ToRole="AccessTable" />
+        </EntityType>
+        <EntityType Name="StudentRegistration">
+          <Key>
+            <PropertyRef Name="StudentID" />
+            <PropertyRef Name="SPATID" />
+          </Key>
+          <Property Name="StudentID" Type="Int32" Nullable="false" />
+          <Property Name="StudentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StudentDOB" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="StudentGender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="StudentCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StudentRegNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StudentProvince" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StudentPicture" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateEnroll" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserCreationID" Type="Int32" />
+          <Property Name="SchoolID" Type="Int32" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="USerTypeID" Type="Int32" />
+          <Property Name="ParentEmail" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RelationToStudent" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ParentAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ContacNumber" Type="Int32" />
+          <Property Name="ParentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Percentage" Type="Int32" />
+          <Property Name="PreviousSchoolName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SPATID" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="FK_AccessTable_ModuleTable">
           <End Role="ModuleTable" Type="Self.ModuleTable" Multiplicity="0..1" />
@@ -1662,6 +1743,7 @@ error 6004: The table 'SchoolManagementSystem.dbo.DesignationMasterTable' is ref
           <EntitySet Name="UserCreationTables" EntityType="Self.UserCreationTable" />
           <EntitySet Name="UserTypeTables" EntityType="Self.UserTypeTable" />
           <EntitySet Name="ViewsTables" EntityType="Self.ViewsTable" />
+          <EntitySet Name="StudentRegistrations" EntityType="Self.StudentRegistration" />
           <AssociationSet Name="FK_AccessTable_ModuleTable" Association="Self.FK_AccessTable_ModuleTable">
             <End Role="ModuleTable" EntitySet="ModuleTables" />
             <End Role="AccessTable" EntitySet="AccessTables" />
@@ -2074,7 +2156,7 @@ error 6004: The table 'SchoolManagementSystem.dbo.DesignationMasterTable' is ref
                 <ScalarProperty Name="StudentDOB" ColumnName="StudentDOB" />
                 <ScalarProperty Name="StudentGender" ColumnName="StudentGender" />
                 <ScalarProperty Name="StudentCity" ColumnName="StudentCity" />
-                <ScalarProperty Name="StudentDistrict" ColumnName="StudentDistrict" />
+                <ScalarProperty Name="StudentRegNumber" ColumnName="StudentRegNumber" />
                 <ScalarProperty Name="StudentProvince" ColumnName="StudentProvince" />
                 <ScalarProperty Name="StudentPicture" ColumnName="StudentPicture" />
                 <ScalarProperty Name="DateEnroll" ColumnName="DateEnroll" />
@@ -2139,6 +2221,33 @@ error 6004: The table 'SchoolManagementSystem.dbo.DesignationMasterTable' is ref
                 <ScalarProperty Name="ViewName" ColumnName="ViewName" />
                 <ScalarProperty Name="ActionName" ColumnName="ActionName" />
                 <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentRegistrations">
+            <EntityTypeMapping TypeName="SchoolManagementSystemModel.StudentRegistration">
+              <MappingFragment StoreEntitySet="StudentRegistration">
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="StudentDOB" ColumnName="StudentDOB" />
+                <ScalarProperty Name="StudentGender" ColumnName="StudentGender" />
+                <ScalarProperty Name="StudentCity" ColumnName="StudentCity" />
+                <ScalarProperty Name="StudentRegNumber" ColumnName="StudentRegNumber" />
+                <ScalarProperty Name="StudentProvince" ColumnName="StudentProvince" />
+                <ScalarProperty Name="StudentPicture" ColumnName="StudentPicture" />
+                <ScalarProperty Name="DateEnroll" ColumnName="DateEnroll" />
+                <ScalarProperty Name="UserCreationID" ColumnName="UserCreationID" />
+                <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="USerTypeID" ColumnName="USerTypeID" />
+                <ScalarProperty Name="ParentEmail" ColumnName="ParentEmail" />
+                <ScalarProperty Name="RelationToStudent" ColumnName="RelationToStudent" />
+                <ScalarProperty Name="ParentAddress" ColumnName="ParentAddress" />
+                <ScalarProperty Name="ContacNumber" ColumnName="ContacNumber" />
+                <ScalarProperty Name="ParentName" ColumnName="ParentName" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="PreviousSchoolName" ColumnName="PreviousSchoolName" />
+                <ScalarProperty Name="SPATID" ColumnName="SPATID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
