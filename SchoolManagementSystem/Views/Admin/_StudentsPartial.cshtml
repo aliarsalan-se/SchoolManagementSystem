@@ -1,0 +1,59 @@
+@Html.DevExpress().GetStyleSheets(
+        new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+        new StyleSheet { ExtensionSuite = ExtensionSuite.Editors },
+        new StyleSheet { ExtensionSuite = ExtensionSuite.GridView }
+    )
+@Html.DevExpress().GetScripts(
+    new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+    new Script { ExtensionSuite = ExtensionSuite.Editors },
+    new Script { ExtensionSuite = ExtensionSuite.GridView }
+)
+
+@{ 
+    Layout = null;
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "Students";
+        settings.CallbackRouteValues = new { Controller = "Admin", Action = "StudentsPartial" };
+
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Admin", Action = "StudentsPartialAddNew" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Admin", Action = "StudentsPartialUpdate" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Admin", Action = "StudentsPartialDelete" };
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsBehavior.ConfirmDelete = true;
+        settings.Settings.ShowFooter = true;
+
+        settings.KeyFieldName = "StudentID";
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = false;
+        settings.Settings.ShowFilterRow = false;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+        settings.SettingsAdaptivity.AdaptivityMode = GridViewAdaptivityMode.Off;
+        settings.SettingsAdaptivity.AdaptiveColumnPosition = GridViewAdaptiveColumnPosition.Right;
+        settings.SettingsAdaptivity.AdaptiveDetailColumnCount = 1;
+        settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
+        settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
+
+        settings.Columns.Add("StudentName");
+        settings.Columns.Add("StudentDOB");
+        settings.Columns.Add("StudentGender");
+        settings.Columns.Add("StudentCity");
+        settings.Columns.Add("StudentRegNumber");
+        settings.Columns.Add("StudentProvince");
+        settings.Columns.Add("StudentPicture");
+        settings.Columns.Add("DateEnroll");
+        
+        settings.CommandColumn.VisibleIndex = settings.Columns.Count;
+        settings.CommandColumn.Visible = true;
+        settings.CommandColumn.ShowNewButton = true;
+        settings.CommandColumn.ShowDeleteButton = true;
+        settings.CommandColumn.ShowEditButton = true;
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+    }
+}
+@grid.Bind(Model).GetHtml()
