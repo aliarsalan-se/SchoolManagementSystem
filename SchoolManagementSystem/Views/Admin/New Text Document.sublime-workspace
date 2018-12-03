@@ -1,0 +1,372 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"al",
+				"vertical-align"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"ge",
+				"getElementById"
+			],
+			[
+				"loca",
+				"localStorage"
+			],
+			[
+				"Pro",
+				"ProjectItems"
+			],
+			[
+				"pro",
+				"project"
+			],
+			[
+				"pr",
+				"projects"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"b",
+				"button"
+			],
+			[
+				"dis",
+				"disease"
+			],
+			[
+				"blood",
+				"blood"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "New Text Document.html",
+			"settings":
+			{
+				"buffer_size": 2173,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/.NET Projetcs/SchoolManagementSystem/SchoolManagementSystem/assets/jquery-ui-1.12.1/external/jquery/jquery.js",
+		"/E/.NET Projetcs/SchoolManagementSystem/SchoolManagementSystem/assets/jquery-ui-1.12.1/jquery-ui.js",
+		"/E/.NET Projetcs/SchoolManagementSystem/SchoolManagementSystem/Views/Admin/New Text Document.sublime-project",
+		"/E/AngularProjects/SchoolManagementSystem/html.codedthemes.com/mash-able/dark/ready-tabs-form.html",
+		"/E/AngularProjects/SchoolManagementSystem/html.codedthemes.com/mash-able/dark/index.html",
+		"/E/.NET Projetcs/StudentPortal/StudentPortal/Views/Shared/_TopMenu.cshtml",
+		"/E/.NET Projetcs/StudentPortal/StudentPortal/Views/Shared/_Layout.cshtml",
+		"/E/.NET Projetcs/smart_login_form-web_Free06-01-2017_219722640/web/index.html",
+		"/C/Users/Sunny Khan/Desktop/rotate.js",
+		"/C/Users/Sunny Khan/Desktop/jquery-3.3.1.min.map",
+		"/E/.NET Projetcs/smart_login_form-web_Free06-01-2017_219722640/web/samrtLogin.html",
+		"/E/.NET Projetcs/StudentPortal/StudentPortal/Views/Students/Create.cshtml",
+		"/E/.NET Projetcs/FileTrackingSystemIT/FileTrackingSystemIT/Views/Home/Index.cshtml",
+		"/C/Users/Sunny Khan/Documents/IISExpress/config/aspnet.config",
+		"/C/Users/Sunny Khan/Documents/IISExpress/config/applicationhost.config",
+		"/I/Cube Theme/cube.adbee.technology/registration-full.html",
+		"/C/Users/Sunny Khan/Desktop/FTS.txt",
+		"/C/inetpub/wwwroot/Website/Views/Home/SignUp.cshtml",
+		"/C/inetpub/wwwroot/Website/Web.config",
+		"/E/Website/Global.asax",
+		"/E/Website/Web.config",
+		"/I/Cube Theme/cube.adbee.technology/login.html",
+		"/E/.NET Projetcs/FileTrackingSystemIT/FileTrackingSystemIT/Views/Home/css/style.css",
+		"/C/Users/Sunny Khan/Desktop/Q499278/GridViewEditingPartial.cshtml",
+		"/E/.NET Projetcs/Materialize Web Design/index.html",
+		"/C/Users/Sunny Khan/Desktop/DateTime.cshtml",
+		"/C/Users/Sunny Khan/source/repos/FTS/FTS/Views/Shared/_Layout.cshtml",
+		"/E/.NET Projetcs/ExpenseManager-ASPCore-EFCore-Highchart-master/ExpenseManager-ASPCore-EFCore-Highchart-master/ExpenseManager/Views/Expense/_expenseForm.cshtml",
+		"/E/.NET Projetcs/emvqr/Embeddinator-4000.targets",
+		"/C/Users/Sunny Khan/source/repos/FTS/FTS/Models/File_Record_Model.edmx",
+		"/E/.NET Projetcs/FileTrackingSystem/FileTrackingSystem/Views/Home/__FTSPartial.cshtml",
+		"/E/.NET Projetcs/FileTrackingSystemIT/FileTrackingSystemIT/Content/fts.css",
+		"/E/.NET Projetcs/FileTrackingSystem/FileTrackingSystem/Views/Shared/_Layout.cshtml",
+		"/E/.NET Projetcs/emvqr/src/StandardizedQR/Embeddinator-4000.targets",
+		"/E/.NET Projetcs/emvqr/src/StandardizedQR/StandardizedQR.csproj",
+		"/E/.NET Projetcs/emvqr/src/Embeddinator-4000.targets",
+		"/E/Learning/Facebook – log in or sign up.html",
+		"/E/.NET Projetcs/Materialize - Material Design Admin Template.html",
+		"/E/.NET Projetcs/Materialize Web Design/overlaymenu/index.html",
+		"/E/.NET Projetcs/Materialize - Material Design Admin Template_files/flag-icon.min.css",
+		"/E/.NET Projetcs/Materialize - Material Design Admin Template_files/materialize.min.js",
+		"/E/.NET Projetcs/Materialize - Material Design Admin Template_files/materialize.css",
+		"/E/.NET Projetcs/Materialize - Material Design Admin Template_files/perfect-scrollbar.min.js.download",
+		"/E/.NET Projetcs/Materialize - Material Design Admin Template_files/materialize.min.js.download",
+		"/E/Web Engg/Themes wordpress/index.html",
+		"/E/.NET Projetcs/StudentPortal/StudentPortal/Views/Shared/Index.cshtml",
+		"/E/.NET Projetcs/Metro - Responsive Admin Dashboard Template_files/css",
+		"/E/.NET Projetcs/Metro - Responsive Admin Dashboard Template_files/bootstrap.min.js.download",
+		"/E/Web Engg/Themes wordpress/assets/css/custom.css",
+		"/E/Web Engg/WebTask/style.css",
+		"/E/Web Engg/WebTask/index.html",
+		"/E/Web Engg/WebTask/methods.js",
+		"/C/Users/Sunny Khan/Desktop/Table_1.txt",
+		"/C/Users/Sunny Khan/Downloads/Microsoft.SkypeApp_kzf8qxf38zg5c!App/All/Student.html",
+		"/C/Users/Sunny Khan/Desktop/keyan/MidptCircle.java",
+		"/C/Users/Sunny Khan/Desktop/keyan/circle.java",
+		"/E/Fiverr Work/drive-download-20180913T142224Z-001/form.blade.php",
+		"/E/Fiverr Work/drive-download-20180913T142224Z-001/form/DirectionCard.vue",
+		"/E/Fiverr Work/drive-download-20180913T142224Z-001/form/StepForm.vue",
+		"/C/wamp64/www/MyApi/public/index.php",
+		"/C/wamp64/www/index.php",
+		"/C/wamp64/apps/phpmyadmin4.5.2/config.inc.php",
+		"/C/wamp64/apps/phpmyadmin4.5.2/db_create.php",
+		"/C/wamp64/apps/phpmyadmin4.5.2/config.sample.inc.php",
+		"/E/Projects/projectmanager/src/component/ProjectItems.js",
+		"/E/Projects/projectmanager/src/component/Projects.js",
+		"/E/Projects/projectmanager/src/App.js",
+		"/E/Projects/projectmanager/public/index.html",
+		"/C/Users/Sunny",
+		"/E/Projects/projectmanager/src/component/project.js",
+		"/E/Projects/projectmanager/src/App.css",
+		"/E/Projects/projectmanager/src/index.js",
+		"/E/Books/7th semester/FM in software engineering/BookManagement(FA14-BSE-121).utf8",
+		"/C/wamp64/www/project/index.php",
+		"/E/Unity/Projects/Virtual Reality Tour/Assets/GoogleVR/LICENSE",
+		"/E/Node.js/app.js",
+		"/E/Unity/Projects/New Unity Project/Assets/Scripts/BackScript.cs",
+		"/E/NFS Most Wanted/Support/Localization.ini",
+		"/E/Unity/Projects/New Unity Project/Assets/Scripts/rotate.js",
+		"/E/NFS MOST WANTED/speed.exe",
+		"/C/wamp64/www/project/aboutus.php",
+		"/C/wamp64/www/project/config.php",
+		"/C/wamp64/www/project/donorlist.php",
+		"/C/wamp64/www/project/login.php",
+		"/I/FA14-BSE-120.zed16",
+		"/E/Books/7th semester/FM in software engineering/Assignment1/Hospital.zed16",
+		"/C/Users/Sunny Khan/Desktop/FA14-BSE-123,115,080.php",
+		"/E/Books/6th Semester/C#/VisualProgramming - 11 March/ExceptionHandlingClass/ExceptionHandlingClass/MainWindow.xaml.cs",
+		"/C/wamp64/apps/phpmyadmin4.5.2/setup/index.php",
+		"/E/Books/6th Semester/C#/VisualProgramming - 11 March/ExceptionHandlingClass/ExceptionHandlingClass/MainWindow.xaml",
+		"/E/Books/6th Semester/C#/VisualProgramming - 11 March/ExceptionHandlingClass/ExceptionHandlingClass/App.xaml.cs",
+		"/C/wamp64/www/project/update.php",
+		"/C/wamp64/www/project/register.php",
+		"/C/wamp64/www/project/contactus.php",
+		"/C/wamp64/www/project/congratulation.php",
+		"/C/wamp64/www/project/test.php",
+		"/C/wamp64/www/project/ltest.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 16/logout.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 16/register.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 16/Home.php",
+		"/C/wamp64/www/CGPA.php",
+		"/C/wamp64/www/add_vhost.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 17/quiz5c.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 16/delete.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 17/googlesuggestamended.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 17/googlesuggestamendednonajax.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 17/apiprogram.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 16/login.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 16/index.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 17/phpajaxdata.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 17/searchSuggest.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 18/loginsqlinjection.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 18/logout.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 18/Home.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 18/login.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 18/checklogin.php",
+		"/C/Users/Sunny Khan/Google Drive/5th semester/Web Engg/Lec 18/index.php",
+		"/C/wamp64/www/project/register.css",
+		"/C/wamp64/www/project/about.html",
+		"/C/wamp64/www/project/register.js",
+		"/C/wamp64/www/project/index.css",
+		"/C/wamp64/www/project/login.css"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"accordion"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "New Text Document.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2173,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "New Text Document.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

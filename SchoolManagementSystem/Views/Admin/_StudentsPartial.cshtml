@@ -37,14 +37,57 @@
         settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
 
         settings.Columns.Add("StudentName");
-        settings.Columns.Add("StudentDOB");
-        settings.Columns.Add("StudentGender");
+        settings.Columns.Add(c =>
+        {
+            c.Name = "StudentDOB";
+            c.Caption = "Date of Birth";
+            c.Settings.AllowHeaderFilter = DefaultBoolean.True;
+            c.PropertiesEdit.DisplayFormatString = "d";
+            c.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            c.ColumnType = MVCxGridViewColumnType.TimeEdit;
+            c.EditorProperties().DateEdit(p =>
+            {
+                p.NullText = "MM/dd/yyyy";
+                p.EditFormat = EditFormat.Custom;
+                p.EditFormatString = "MMMM dd, yyyy";
+
+            });
+        });
+        settings.Columns.Add(d =>
+        {
+            d.FieldName = "StudentGender";
+            d.Caption = "Gender";
+            d.Settings.AllowHeaderFilter = DefaultBoolean.True;
+            d.EditorProperties().ComboBox(p =>
+            {
+                p.TextField = "SendToDepartment";
+                p.ValueField = "SendTo_Department";
+                p.ValueType = typeof(string);
+                p.Items.Add("Male");
+                p.Items.Add("Female");
+            });
+        });
         settings.Columns.Add("StudentCity");
         settings.Columns.Add("StudentRegNumber");
         settings.Columns.Add("StudentProvince");
         settings.Columns.Add("StudentPicture");
-        settings.Columns.Add("DateEnroll");
-        
+        settings.Columns.Add(c =>
+        {
+            c.Name = "DateEnroll";
+            c.Caption = "Date of Enrollment";
+            c.Settings.AllowHeaderFilter = DefaultBoolean.True;
+            c.PropertiesEdit.DisplayFormatString = "d";
+            c.UnboundType = DevExpress.Data.UnboundColumnType.DateTime;
+            c.ColumnType = MVCxGridViewColumnType.TimeEdit;
+            c.EditorProperties().DateEdit(p =>
+            {
+                p.NullText = "MM/dd/yyyy";
+                p.EditFormat = EditFormat.Custom;
+                p.EditFormatString = "MMMM dd, yyyy";
+
+            });
+        });
+
         settings.CommandColumn.VisibleIndex = settings.Columns.Count;
         settings.CommandColumn.Visible = true;
         settings.CommandColumn.ShowNewButton = true;
