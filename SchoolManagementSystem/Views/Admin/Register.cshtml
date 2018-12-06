@@ -1,0 +1,348 @@
+﻿@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="/Scripts/bower_components/jquery.steps/css/jquery.steps.css">
+<style>
+    .timage {
+        width: 198px;
+        height: 198px;
+    }
+    .ctab {
+        background-color: #0073aa;
+        outline: 1px solid #fff;
+        outline-color: rgb(255, 255, 255);
+        outline-style: solid;
+        outline-width: 1px;
+        outline-offset: -7px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        line-height:20px;
+        display:block;
+        width:auto;
+        margin-left:10px;
+    }
+    .ctab:hover
+    {
+        display: block;
+        width: auto;
+        text-decoration: none;
+        outline:none;
+    }
+</style>
+<script>
+    $(function () {
+        $("#StudentProvince").change(function () {
+            debugger
+            var $dropdown = $(this);
+            $.getJSON("/Models/Data.json", function (Data) {
+
+                var key = $dropdown.val();
+                var vals = [];
+
+                switch (key) {
+                    case 'KPK':
+                        vals = Data.KPK.split(",");
+                        break;
+                    case 'Punjab':
+                        vals = Data.Punjab.split(",");
+                        break;
+                    case 'Sindh':
+                        vals = Data.Sindh.split(",");
+                        break;
+                    case 'Balochistan':
+                        vals = Data.Balochistan.split(",");
+                        break;
+                    case 'Federal':
+                        vals = Data.Federal.split(",");
+                        break;
+                    case 'base':
+                        vals = ['Please Select Your Province'];
+                }
+
+                var $jsontwo = $("#StudentCity");
+                $jsontwo.empty();
+                $.each(vals, function (index, value) {
+                    $jsontwo.append("<option>" + value + "</option>");
+                });
+
+            });
+        });
+
+    });
+</script>
+
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <div class="page-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div id="wizard">
+                                                        <section>
+                                                            <div class="nav nav-tabs md-tabs">
+                                                                <button class="btn-xlg primary-btn ctab" role="tab" onclick="tabselector(event,'basicDetails')">1. Basic Details <i class="icofont icofont-arrow-right"></i></button>
+                                                                <button class="btn-xlg primary-btn ctab" role="tab" onclick="tabselector(event,'basicDetails')">2. Parent Information <i class="icofont icofont-arrow-right"></i></button>
+
+                                                            </div>
+                                                                <fieldset style="width:100%">
+                                                                    <div class="card-block">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div id="wizard">
+                                                                                    <section>
+                                                                                        <div class="wizard-form" id="example-advanced-form">
+                                                                                            @Html.AntiForgeryToken()
+                                                                                            <table class="table col-md-12 table-bordered">
+                                                                                                <tr>
+                                                                                                    <td style="width:226px">
+                                                                                                        <div class="form-control-inverse">
+                                                                                                            <div id="image-holder" class="form-control form-control-inverse" style="height:200px;width:200px;padding:0"></div>
+                                                                                                            <br />
+                                                                                                            <input id="Image" name="Image" type="file" class="required form-control form-control-inverse" style="width:200px">
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                    <td style="width:700px; padding:4px 2px 2px 10px;font-weight:bold">
+                                                                                                        <div class="form-group row col-sm-12">
+                                                                                                            <div class="col-sm-2" style="padding-left:5px; padding-right:2px">
+                                                                                                                <label for="StudentRegNum" class="block" style="line-height:50px">Registration#:</label>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4" style="padding-left:5px">
+                                                                                                                <input type="text" id="StudentRegNum" name="StudentRegNum" placeholder="Year/Class/Roll#" class="required form-control form-control-inverse" />
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-2" style="padding-left:5px;padding-right:2px">
+                                                                                                                <label for="StudentName" class="block" style="line-height:50px">Full Name:</label>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4" style="padding-left:5px;">
+                                                                                                                <input type="text" id="StudentName" name="StudentName" placeholder="Full Name" class="required form-control form-control-inverse" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="form-group row col-sm-12">
+                                                                                                            <div class="col-sm-2" style="padding-left:5px; padding-right:2px">
+                                                                                                                <label for="StudentDOB" class="block" style="line-height:50px">Date Of Birth:</label>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4" style="padding-left:5px">
+                                                                                                                <input onfocus="this.type='date'" id="StudentDOB" name="StudentDOB" placeholder="Date of Birth" class="required form-control form-control-inverse" />
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-2" style="padding-left:5px">
+                                                                                                                <label for="StudentGender" class="block" style="line-height:50px">Gender:</label>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4" style="padding-left:5px">
+                                                                                                                <select id="StudentGender" name="StudentGender" type="" class="required form-control form-control-inverse">
+                                                                                                                    <option value="" disabled selected>Select Gender</option>
+                                                                                                                    <option value="Male">Male</option>
+                                                                                                                    <option value="Female">Female</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="form-group row col-sm-12">
+                                                                                                            <div class="col-sm-2" style="padding-left:5px; padding-right:2px">
+                                                                                                                <label for="StudentProvince" class="block" style="line-height:50px">Province:</label>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4" style="padding-left:5px">
+                                                                                                                <select id="StudentProvince" name="StudentProvince" type="" class="required form-control form-control-inverse">
+                                                                                                                    <option value="base" disabled selected>Select Province</option>
+                                                                                                                    <option value="KPK">KPK</option>
+                                                                                                                    <option value="Punjab">Punjab</option>
+                                                                                                                    <option value="Sindh">Sindh</option>
+                                                                                                                    <option value="Balochistan">Balochistan</option>
+                                                                                                                    <option value="Federal">Federal</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-2" style="padding-left:5px">
+                                                                                                                <label for="StudentCity" class="block" style="line-height:50px">City:</label>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4" style="padding-left:5px">
+                                                                                                                <select id="StudentCity" name="StudentCity" type="" class="required form-control form-control-inverse">
+                                                                                                                    <option>Select the Province</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="form-group row col-sm-12">
+                                                                                                            <div class="col-sm-2" style="padding-left:5px; padding-right:2px">
+                                                                                                                <label for="DateEnroll" class="block" style="line-height:50px">Admission:</label>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4" style="padding-left:5px">
+                                                                                                                <input onfocus="this.type='date'" id="DateEnroll" name="DateEnroll" placeholder="Today's Date" class="required form-control form-control-inverse today" />
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-2"></div>
+                                                                                                            <div class="col-sm-4" style="padding-left:5px">
+                                                                                                                <input type="submit" id="submit" name="submit" class="form-control btn btn-primary" />
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+
+                                                                                        </div>
+                                                                                    </section>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+                                                                <h3> General information </h3>
+                                                                <fieldset>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-sm-4 col-lg-2">
+                                                                            <label for="name-1" class="block">First name *</label>
+                                                                        </div>
+                                                                        <div class="col-sm-8 col-lg-10">
+                                                                            <input id="name-1" name="name" type="text" class="form-control required">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-sm-4 col-lg-2">
+                                                                            <label for="surname-1" class="block">Last name *</label>
+                                                                        </div>
+                                                                        <div class="col-sm-8 col-lg-10">
+                                                                            <input id="surname-1" name="surname" type="text" class="form-control required">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-sm-4 col-lg-2">
+                                                                            <label for="phone-1" class="block">Phone #</label>
+                                                                        </div>
+                                                                        <div class="col-sm-8 col-lg-10">
+                                                                            <input id="phone-1" name="phone" type="number" class="form-control required phone">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-sm-4 col-lg-2">
+                                                                            <label for="date-1" class="block">Date Of Birth</label>
+                                                                        </div>
+                                                                        <div class="col-sm-8 col-lg-10">
+                                                                            <input id="date-1" name="Date Of Birth" type="text" class="form-control required date-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-sm-4 col-lg-2">Select Country</div>
+                                                                        <div class="col-sm-8 col-lg-10">
+                                                                            <select class="form-control required">
+                                                                                <option>Select State</option>
+                                                                                <option>Gujarat</option>
+                                                                                <option>Kerala</option>
+                                                                                <option>Manipur</option>
+                                                                                <option>Tripura</option>
+                                                                                <option>Sikkim</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+                                                                <h3> Education </h3>
+                                                                <fieldset>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-sm-4 col-lg-2">
+                                                                            <label for="University-1" class="block">University</label>
+                                                                        </div>
+                                                                        <div class="col-sm-8 col-lg-10">
+                                                                            <input id="University-1" name="University" type="text" class="form-control required">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-sm-4 col-lg-2">
+                                                                            <label for="Country-1" class="block">Country</label>
+                                                                        </div>
+                                                                        <div class="col-sm-8 col-lg-10">
+                                                                            <input id="Country-1" name="Country" type="text" class="form-control required">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-sm-4 col-lg-2">
+                                                                            <label for="Degreelevel-1" class="block">Degree level #</label>
+                                                                        </div>
+                                                                        <div class="col-sm-8 col-lg-10">
+                                                                            <input id="Degreelevel-1" name="Degree level" type="text" class="form-control required phone">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-sm-4 col-lg-2">
+                                                                            <label for="datejoin-1" class="block">Date Join</label>
+                                                                        </div>
+                                                                        <div class="col-sm-8 col-lg-10">
+                                                                            <input id="datejoin-1" name="Date Of Birth" type="text" class="form-control required">
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+
+                                                    
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="styleSelector">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<scripts>
+    <script src="/Scripts/bower_components/jquery.cookie/js/jquery.cookie.js"></script>
+    @*<script src="/Scripts/bower_components/jquery.steps/js/jquery.steps.js"></script>*@
+    <script src="/Scripts/bower_components/jquery-validation/js/jquery.validate.js"></script>
+
+    <script src="/assets/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+    <script src="/assets/pages/forms-wizard-validation/form-wizard.js"></script>
+
+</scripts>
+<script>
+
+    $(function () {
+        $("#Image").on('change', function () {
+            //Get count of selected files
+            var countFiles = $(this)[0].files.length;
+
+            var imgPath = $(this)[0].value;
+            var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+            var image_holder = $("#image-holder");
+            image_holder.empty();
+
+            if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
+                if (typeof (FileReader) != "undefined") {
+
+                    //loop for each file selected for uploaded.
+                    for (var i = 0; i < countFiles; i++) {
+
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $("<img />", {
+                                "src": e.target.result,
+                                "class": "thumb-image timage"
+                            }).appendTo(image_holder);
+                        }
+                        image_holder.show();
+                        reader.readAsDataURL($(this)[0].files[i]);
+                    }
+
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            } else {
+                alert("Pls select only images");
+            }
+        });
+    });
+</script>

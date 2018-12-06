@@ -11,9 +11,14 @@ namespace SchoolManagementSystem.Controllers
     public class AdminController : Controller
     {
         SchoolManagementSystem.Models.SchoolManagementSystemEntities db = new SchoolManagementSystemEntities();
-        private object u;
 
         // GET: Admin
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        public ActionResult Register()
+        {
+            return View();
+        }
         public ActionResult RegisterStudent()
         {
             return View();
@@ -45,6 +50,10 @@ namespace SchoolManagementSystem.Controllers
             return View();
         }
         
+        public ActionResult StudentDetail()
+        {
+            return View();
+        }
 
         [ValidateInput(false)]
         public ActionResult StudentsPartial()

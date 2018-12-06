@@ -13,7 +13,7 @@ namespace SchoolManagementSystem {
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Admin", action = "Students", id = UrlParameter.Optional }
+                defaults: new { controller = "Admin", action = "Register", id = UrlParameter.Optional }
             );
         }
     }
